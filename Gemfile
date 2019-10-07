@@ -28,8 +28,6 @@ gem 'jbuilder', '~> 2.7'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
-# Make errors better looking
-gem 'better_errors', '~> 2.5', '>= 2.5.1'
 
 # Simple Form
 gem 'simple_form', '~> 5.0', '>= 5.0.1'
@@ -50,6 +48,8 @@ group :development do
   gem 'guard', '~> 2.15', '>= 2.15.1'
   # Guard::LiveReload automatically reloads your browser when 'view' files are modified.
   gem 'guard-livereload', '~> 2.5', '>= 2.5.2', require: false
+  # Make errors better looking
+  gem 'better_errors', '~> 2.5', '>= 2.5.1'
 end
 
 group :test do
@@ -62,3 +62,7 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# Style
+gem 'autoprefixer-rails'
+gem 'font-awesome-sass', '~> 5.6.1'

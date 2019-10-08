@@ -8,6 +8,16 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params) # see below
+
+    if @post.save
+      redirect_to @post
+    else
+      render 'new'
+    end
+  end
+
+  def show
+    @post = Post.find(params[:id])
   end
 
   private

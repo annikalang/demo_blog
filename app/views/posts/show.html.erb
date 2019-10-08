@@ -1,2 +1,5 @@
-<h1 class="title"><%= @post.title %></h1>
-<p class="content"><%= @post.content %></p>
+<% content_for :page_title, @post.title %>
+
+<div class="container">
+  <p class="content"><%= @post.content %></p>
+</div>

@@ -1,5 +1,19 @@
 <% content_for :page_title, @post.title %>
 
 <div class="container">
+  <p><strong>Actions</strong></p>
+  <%= link_to "Edit", edit_post_path(@post), class: "btn btn-light" %>
+  <a href="" class="btn btn-danger">Delete</a>
+  <hr>
+</div>
+
+
+<div class="container">
   <p class="content"><%= @post.content %></p>
+  <hr>
+</div>
+
+
+<div class="comments">
+
 </div>

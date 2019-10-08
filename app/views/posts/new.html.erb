@@ -1,0 +1,9 @@
+<h1>New Post</h1>
+
+<div>
+  <%= simple_form_for @post do |f| %>
+  <%= f.input :title, as: :string, required: true %>
+  <%= f.input :content, as: :text, required: true %>
+  <%= f.button :submit, "Create new post", class: "btn btn-primary" %>
+  <% end %>
+</div>

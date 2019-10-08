@@ -1,7 +1,11 @@
-.banner {
+.background-image {
+  background-image: url(https://images.unsplash.com/photo-1495639004258-10f5563eb702?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80);
   background-size: cover;
   background-position: center;
-  padding: 150px 0;
+}
+
+.banner {
+  padding: 10% 5px 15%;
 }
 
 .banner h1 {
@@ -19,4 +23,16 @@
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   text-align: center;
+}
+
+.navbar-item {
+  background-color: white;
+  padding: 15px 20px;
+  border-radius: 30px;
+  opacity: 0.9;
+}
+
+.navbar a {
+  color: #5F210C;
+  font-family: $headers-font
 }

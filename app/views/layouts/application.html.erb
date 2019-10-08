@@ -10,6 +10,20 @@
   </head>
 
   <body>
+    <div class="background-image">
+      <div class="navbar">
+        <%= link_to "Demo Blog", root_path, class: "navbar-item" %>
+        <%= link_to "Create new post", new_post_path, class: "navbar-item" %>
+      </div>
+
+      <div class="banner">
+        <div class="container">
+          <h1>
+            <%= yield :page_title %>
+          </h1>
+        </div>
+      </div>
+    </div>
     <%= yield %>
   </body>
 </html>

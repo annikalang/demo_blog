@@ -1,4 +1,7 @@
 class PostsController < ApplicationController
+# before the actions in the array are executed, the private find_post method is executed
+before_action :find_post, only: [:show, :edit, :update, :destroy]
+
   def index
     @posts = Post.all.order("created_at DESC")
   end
@@ -18,15 +21,12 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
   end
 
   def edit
-    @post = Post.find(params[:id])
   end
 
   def update
-    @post = Post.find(params[:id])
 
     if @post.update(post_params)
       redirect_to @post
@@ -36,9 +36,7 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @post = Post.find(params[:id])
     @post.destroy
-
     redirect_to posts_path # redirecting user to index page after deleting the post
   end
 
@@ -48,5 +46,10 @@ class PostsController < ApplicationController
   # being put into the form when creating a post, otherwhise you could submit any data to the server
   def post_params
     params.require(:post).permit(:title, :content)
+  end
+
+  # getting rid of repetitions of Post.find --> DRY (don't repeat yourself)
+  def find_post
+    @post = Post.find(params[:id])
   end
 end

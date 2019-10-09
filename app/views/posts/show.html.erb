@@ -3,7 +3,7 @@
 <div class="container">
   <p><strong>Actions</strong></p>
   <%= link_to "Edit", edit_post_path(@post), class: "btn btn-light" %>
-  <a href="" class="btn btn-danger">Delete</a>
+  <%= link_to "Delete", post_path(@post), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger" %>
   <hr>
 </div>
 

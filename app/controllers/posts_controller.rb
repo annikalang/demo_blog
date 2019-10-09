@@ -35,6 +35,13 @@ class PostsController < ApplicationController
     end
   end
 
+  def destroy
+    @post = Post.find(params[:id])
+    @post.destroy
+
+    redirect_to posts_path # redirecting user to index page after deleting the post
+  end
+
   private
 
   # for security reasons, to prevent that only permit the title and content from

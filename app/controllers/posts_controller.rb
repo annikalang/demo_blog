@@ -35,6 +35,10 @@ class PostsController < ApplicationController
     end
   end
 
+  def destroy
+    @post = Post.find(params[:id])
+  end
+
   private
 
   # for security reasons, to prevent that only permit the title and content from

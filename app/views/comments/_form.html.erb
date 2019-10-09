@@ -1,0 +1,7 @@
+<div class="container">
+  <%= simple_form_for([@post, @post.comments.build]) do |f| %>
+    <%= f.input :name, as: :string, required: true %>
+    <%= f.input :comment, as: :text, required: true %>
+    <%= f.submit "Save post", class: "btn btn-primary" %>
+  <% end %>
+</div>

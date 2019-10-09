@@ -1,5 +1,6 @@
 <% content_for :page_title, @post.title %>
 
+<!-- Actions container -->
 <div class="container">
   <p><strong>Actions</strong></p>
   <%= link_to "Edit", edit_post_path(@post), class: "btn btn-light" %>
@@ -7,13 +8,21 @@
   <hr>
 </div>
 
-
+<!-- Post's content container -->
 <div class="container">
   <p class="content"><%= @post.content %></p>
   <hr>
 </div>
 
 
-<div class="comments">
+<div class="container">
+  <h3>Comments (<%= @post.comments.count %>)</h3>
+  <%= render @post.comments %>
 
+  <div class="comment-form">
+    <hr>
+    <h4>Leave a reply</h4>
+
+    <%= render 'comments/form' %>
+  </div>
 </div>

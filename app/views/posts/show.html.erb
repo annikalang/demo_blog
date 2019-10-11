@@ -2,20 +2,23 @@
 
 <!-- Actions container -->
 <div class="container">
-  <p><strong>Actions</strong></p>
-  <%= link_to "Edit", edit_post_path(@post), class: "btn btn-light" %>
-  <%= link_to "Delete", post_path(@post), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger" %>
+  <div class="d-flex bd-highlight mt-3">
+    <div class="mr-auto pt-1 bd-highlight"><p><strong>Actions</strong></p></div>
+    <div class="p-0 bd-highlight"><%= link_to "Edit", edit_post_path(@post), class: "btn btn-light" %></div>
+    <div class="p-0 bd-highlight"><%= link_to "Delete", post_path(@post), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger" %></div>
+  </div>
   <hr>
-</div>
+<!-- </div> -->
+
 
 <!-- Post's content container -->
-<div class="container">
+<!-- <div class="container"> -->
   <p class="content"><%= @post.content %></p>
   <hr>
-</div>
+<!-- </div> -->
 
 
-<div class="container">
+<!-- <div class="container"> -->
   <h3>Comments (<%= @post.comments.count %>)</h3>
   <%= render @post.comments %>
 

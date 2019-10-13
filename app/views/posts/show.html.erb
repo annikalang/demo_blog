@@ -19,11 +19,11 @@
 
 
 <!-- <div class="container"> -->
-  <p>Comments (<%= @post.comments.count %>)</p>
+  <p><strong>Comments (<%= @post.comments.count %>)</strong></p>
   <%= render @post.comments %>
 
   <!-- <div class="comment-form"> -->
-    <p>Leave a reply</p>
+    <p><strong>Leave a reply</strong></p>
 
     <%= render 'comments/form' %>
   <!-- </div> -->
